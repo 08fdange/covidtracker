@@ -22,7 +22,7 @@ const Chart = ({ data, country }) => {
         ? (
             <Line 
                 data={{
-                    labels: dailyData.map(({ date }) => date),
+                    labels: dailyData.reverse().map(({ date }) => date),
                     datasets: [{
                         data: dailyData.map(({ confirmed }) => confirmed),
                         label: "Infected",
